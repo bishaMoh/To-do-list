@@ -1,9 +1,42 @@
+
+* {
+    color: #ffffff;
+}
 body {
-    background-color: #6921ad94;
+    background-color: #dec9de;
+    padding: 0;
+    margin: 0;
+    width: inherit;
+    height:inherit;
+    background-color: #000000;
 }
 
 button {
     width: 5em;
     height: 2em;
     padding: 3px;
+    background-color: #6e07cef1;
+    color: #ffffff;
+    border: 1px solid #6310b1f1;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px #42067af1;
+}
+
+.add {
+    display: flex;
+    justify-content: end;
+}
+
+#btn {
+    margin-top: 5px;
+    margin-right: 10px;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+input {
+    background-color: #633972;
 }
