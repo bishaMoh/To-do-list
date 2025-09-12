@@ -18,7 +18,7 @@ export function task() {
 
             
             const insert = document.getElementById("insert");
-            insert.style.display = "inline-block";
+            insert.style.display = "flex";
             
         });  
 }
