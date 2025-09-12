@@ -11,13 +11,15 @@ export function task() {
             };
 
             const todoItem = new todo(confirm.input.value).title();
-            
-            console.log(todoItem);
             ul.appendChild(todoItem);
+
             confirm.confirmDiv.innerHTML = "";
+            confirm.confirmDiv.style.display = "none";
+
             
-            const add = document.getElementById("btn");
-            add.style.display = "inline-block";
+            const insert = document.getElementById("insert");
+            insert.style.display = "inline-block";
+            
         });  
 }
 // a class to set the todos

@@ -17,6 +17,7 @@ function create(title) {
 
 function Confirminput() {
     const confirmDiv = document.getElementById("confirmInput");
+    confirmDiv.style.display = "flex";
     let input = document.getElementById("input");
     let confirmBtn = document.getElementById("btn2");
 
