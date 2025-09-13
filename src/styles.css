@@ -44,10 +44,20 @@ button {
 
 li {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: 2rem auto;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    font-size: 2rem;
+    margin: .5rem;
 }
 
-
-
+li:hover {
+    background-color: #171616;
+    border: 0px;
+    border-radius: 5px;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -57,6 +67,8 @@ li {
 }
 
 header {
+    font-size: 2rem;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,10 +125,16 @@ header {
 #confirmInput {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 1em;
+    background-color: #28043cd1;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(101 3 127);
+    gap: 3%;
 }
 input[type ="text"] {
+    color: black;
     width: 100%;
     max-width: 300px;
     padding: 10px 14px;
@@ -125,4 +143,36 @@ input[type ="text"] {
     border-radius: 8px;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
 }
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0.5rem;
+    width: 28px;
+    height: 28px;
+    border: 2px solid gray;
+    border-radius: 50%; /* bubble shape */
+    background-color: black; /* fill color when unchecked */
+    cursor: pointer;
+    transition: all 0.2s ease;
+  
+    /* apply mask */
+    -webkit-mask: url("./checkboxes/checkbox-svgrepo-com.svg") no-repeat center/contain;
+    mask: url("./checkboxes/checkbox-svgrepo-com.svg") no-repeat center/contain;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: purple; /* fills the svg shape fully */
+    border-color: purple;
+    box-shadow: 0 0 10px purple, 0 0 4px violet;
+    transform: scale(1.15);
+  }
+  
+  
+  
+  
+  
