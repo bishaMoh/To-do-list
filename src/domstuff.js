@@ -1,50 +1,46 @@
-function create(title) {
-    const li = document.createElement("li");
-    const input = document.createElement("input");
-    const span = document.createElement("span");
-
-    input.setAttribute("type", "checkbox");
-    span.textContent = `${title}`;
-    input.addEventListener("change", () => {
-        span.style.textDecoration = input.checked ? "line-through" : "none";
-    });
-
-    li.appendChild(input);
-    li.appendChild(span);
-    
-    return li;
-}
 
 function Confirminput() {
-    const confirmDiv = document.getElementById("confirmInput");
-    confirmDiv.style.display = "flex";
-    let input = document.getElementById("input");
+    // input.style.display = "inline-block";
+    // confirmBtn.style.display = "inline-block";
+    const addForm = document.getElementById("addForm");
+    let titleFeild = document.getElementById("titleInput");
+    let descFeild = document.getElementById("descInput");
     let confirmBtn = document.getElementById("btn2");
 
-    if(!input) {
-         input = document.createElement("input");
-        input.id = "input";
-         confirmBtn = document.createElement("button");
+    if(!titleFeild) {
+        titleFeild = document.createElement("input");
+        titleFeild.id = "titleInput";
+        titleFeild.placeholder = "title";
+
+        descFeild = document.createElement("input");
+        descFeild.id = "descInput";
+        descFeild.placeholder = "description";
+
+        confirmBtn = document.createElement("button");
         confirmBtn.id = "btn2";
+        confirmBtn.textContent = "Confirm";
+        confirmBtn.type = "button";
 
-
-        confirmDiv.appendChild(confirmBtn);
-        confirmDiv.appendChild(input);
-        confirmBtn.textContent = "confirm";
+        addForm.appendChild(titleFeild);
+        addForm.appendChild(descFeild);
+        addForm.appendChild(confirmBtn);
     }
-    input.style.display = "inline-block";
-    confirmBtn.style.display = "inline-block";
 
+    addForm.style.display = "flex";
 
     return {
-        confirmDiv,
+        addForm,
         confirmBtn,
-        input
+        titleFeild,
+        descFeild
     }
 }
+//hiding the desc 
+// description should be hidin when adding a task.
+// const desc = document.getElementsByTagName("p");
+// desc.style.display = "none";
+// function description() {
+//     const details = 
+// }
 
-
-
-
-
-export { create, Confirminput };
+export { Confirminput };
