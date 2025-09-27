@@ -1,5 +1,6 @@
 import "./styles.css";
 import { task } from "./todo-item";
+import { requestProject, NavProject, ShowProject } from "./projects";
 
 
 const btn = document.getElementById("btn");
@@ -11,7 +12,26 @@ btn.addEventListener("click", () => {
         insert.style.display = "none";
         task();
     }
-}); 
+});
+
+// handling the visiblty of the project form
+const handlingProjectForm = (function () {
+    const projects = document.getElementById("projectBtn");
+    projects.addEventListener("click", () => {
+        let formDiv = document.getElementById("formDiv");
+       if(!formDiv) {
+           requestProject();
+       }else {
+        formDiv.style.display = "block";
+        // NavProject().insert();
+        // NavProject().shutDown();
+       } 
+       NavProject();
+       ShowProject();
+    })
+})();
+
+
 
 
 
